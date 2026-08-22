@@ -12,14 +12,14 @@
 <body>
     <div class="main">
         <nav>
-            <img src="—Pngtree—javanese character with blangkon holding_8999487.png" alt="" srcset="">
+            <img id="logo" src="—Pngtree—javanese character with blangkon holding_8999487.png" alt="" srcset="">
             <div id="nav-partTwo">
                 <h4>home</h4>
                 <h4>about</h4>
                 <h4>contact</h4>
                 <h4>account</h4>
                 <button>Sign Up</button>
-                <i class="ri-menu-3-line"></i>
+                <i class="ri-menu-3-line" id="menu"></i>
             </div>
         </nav>
         <div class="content">
@@ -31,5 +31,13 @@
             <div class="right"><img src="order.jpg" alt=""></div>
         </div>
     </div>
+    <script>
+    let menu = document.querySelector("#menu");
+    let navPartTwo = document.querySelector("#nav-partTwo");
+
+    menu.addEventListener("click", function(){
+        navPartTwo.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
