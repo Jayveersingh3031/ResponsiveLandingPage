@@ -37,6 +37,12 @@ nav h2{
 nav h4{
     font-size: 1.5vw;
     font-style: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav h4:hover {
+    color: #FD7CA5;
 }
 
 nav i{
@@ -111,20 +117,43 @@ img{
     nav{
         padding: 0 5vw;
         height: 60px;
+        position: relative;
     }
     nav h2{
         font-size: 6vw;
     }
     nav h4{
-        display: none;
+        display: block;
+        font-size : 4vw;
     }
     nav i{
         display: block;
         font-size: 5vw;
+        cursor : pointer;
     }
     nav #nav-partTwo button{
-        display: none;
+        display: block;
+        font-size : 3vw;
     }
+
+    #nav-partTwo{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        padding: 5vw;
+        flex-direction: column;
+        gap: 5vw;
+        align-items: center;
+        border-bottom: 2px solid #dada;
+    }
+
+    #nav-partTwo.active{
+        display: flex;
+    }
+    
     .content{
         flex-direction: column;
         height: calc(100% - 60px);
@@ -154,4 +183,12 @@ img{
         border-radius: 1.5vw;
     }
 
+    nav #nav-partTwo button{
+        padding: 2vw;
+        border-radius: 1vw;   
+    }
+
+    img{
+        height: 15vw;
+    }
 }
